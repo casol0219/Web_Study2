@@ -1,0 +1,32 @@
+<html>	
+	<head>
+		<title> 실습#2 </title>
+	</head>
+	<body>
+		<p align="center">
+			<input type="button" onclick="jstest()" value="클릭시 실행"/>
+		</p>
+	</body>
+</html>
+<script>
+	function jstest(){
+		var string=prompt("숫자입력");
+		alert("1번째 입력 값 : "+ string);
+		var string2=prompt("숫자입력");
+		alert("1번째 입력 값 : "+ string + "\n2번째 입력 값 : "+string2);
+		var string3=prompt("숫자입력");
+		alert("1번째 입력 값 : "+ string+"\n2번째 입력 값 : "+string2 +"\n3번째 입력 값 : "+string3);
+		
+		document.write("입력한 수 : "+string+" "+string2+" "+string3+"<br>");
+		document.write("가장큰수 : ");
+		if(string>=string2&&string>=string3){
+			document.write(string);
+		}
+		if(string2>=string&&string2>=string3){
+			document.write(string2);
+		}
+		if(string3>=string&&string3>=string2){
+			document.write(string3);
+		}
+	}
+</script>
