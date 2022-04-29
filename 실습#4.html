@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<title>실습#4</title>
+		<style>
+			div{
+				width:100px;
+				height:100px;
+				display:inline-block;
+			}
+		</style>
+	</head>
+	<body>
+			<div id="red" style="margin-left:450px; background-color:red" onmouseover="change1()"></div>
+			<div id="blue" style="background-color:blue" onmouseover="change2()"></div>
+			<div id="green" style="background-color:green" onmouseover="change3()"></div>
+			
+		<script>
+			function change1(){
+				document.getElementsByTagName("body")[0].style.backgroundColor="red";
+			}
+			function change2(){
+				document.getElementsByTagName("body")[0].style.backgroundColor="blue";
+			}
+			function change3(){
+				document.getElementsByTagName("body")[0].style.backgroundColor="green";
+			}
+		</script>
+	</body>
+</html>
