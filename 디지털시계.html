@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<title>디지털시계</title>
+		<link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+	</head>
+	<style type="text/css">
+		div{
+			font-size:100px;
+			font-family: 'Arvo', serif;
+			color:#83BD75;
+			text-align:center;
+			border:solid 30px;
+			border-color:#B4E197;
+			background-color:#E9EFC0;
+		}
+	</style>
+	<body>
+		<div id="clock"></div>
+		
+		
+	  <script>
+			function fclock(){                       
+				var date=new Date();
+				var hour=date.getHours();
+				var minute=date.getMinutes();
+				var second=date.getSeconds();
+			
+				if(minute<10&&second<10){
+				document.getElementById("clock").innerHTML="⋆···"+hour+"···"+"0"+minute+"···"+"0"+second+"···☁";
+				}
+				else if(minute<10&&second>=10){
+				document.getElementById("clock").innerHTML="⋆···"+hour+"···"+"0"+minute+"···"+second+"···☁︎";
+				}
+				else if(minute>=10&&second<10){
+				document.getElementById("clock").innerHTML="⋆···"+hour+"···"+minute+"···"+"0"+second+"···☁︎";
+				}
+				else{
+				document.getElementById("clock").innerHTML="⋆···"+hour+"···"+minute+"···"+second+"···☁︎";
+				}
+			}
+			
+			fclock();
+			setInterval(fclock,1000);
+		</script>
+	</body>
+</html>
